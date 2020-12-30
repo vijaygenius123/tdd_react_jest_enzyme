@@ -24,13 +24,14 @@ describe('App', () => {
   })
 
   it('has people property in state', () => {
-    const state = wrapper.state(); // state
+    const state = wrapper.state();
     expect(state.people).toBeDefined();
   })
 
   it('passes people property of state to PersonList as prop', () => {
     const personList = wrapper.find(PersonList);
     expect(personList.props().people).toEqual(wrapper.state().people);
+
   })
 
 })

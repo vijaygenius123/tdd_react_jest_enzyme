@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      people: []
+      people: [{ firstName: 'Tony', lastName: 'Stark' }]
     }
   }
   render() {
