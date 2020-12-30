@@ -1,12 +1,22 @@
-import PersonList from './components/PersonList'
+import React, { Component } from 'react';
+import PersonList from './components/PersonList';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <PersonList />
-    </div>
-  );
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      people: []
+    }
+  }
+  render() {
+    return (
+      <div className="App" >
+        <PersonList people={this.state.people} />
+      </div>
+    );
+  }
 }
 
 export default App;
